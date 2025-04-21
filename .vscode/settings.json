@@ -1,0 +1,27 @@
+{
+    "python.terminal.activateEnvironment": true,
+    "python.defaultInterpreterPath": "../venv/Scripts/python",
+    
+    "git.autoRepositoryDetection": "subFolders",
+    "breadcrumbs.enabled": false,
+
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.importFormat": "absolute",
+    "python.analysis.enablePytestSupport": true,
+    "python.analysis.indexing": true,
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "tensorflow",
+            "depth": 3,
+            "includeAllSymbols": true
+        }
+    ],
+
+}

@@ -1,0 +1,48 @@
+# ▶️ Python general
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.log
+*.tmp
+
+# ▶️ Byte-compiled / optimized / DLL files
+*.pyc
+*.pyd
+*.pdb
+
+# ▶️ Environment / virtualenv
+.env
+.venv
+env/
+venv/
+ENV/
+*.env
+*.venv
+
+# ▶️ OS / system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ▶️ Output files
+*.out
+*.bak
+*.swp
+*~
+
+# ▶️ Logs & reports
+logs/
+*.log
+*.txt
+
+# ▶️ PyTest / coverage
+htmlcov/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.cache/
+.pytest_cache/
+
