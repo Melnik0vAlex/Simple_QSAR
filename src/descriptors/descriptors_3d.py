@@ -30,12 +30,15 @@ descriptor_3d_names = [
 ]
 
 
-def compute_3d_descriptors(smiles):
+def compute_3d_descriptors(smiles: str) -> dict:
     """
     Вычисляет 3D-дескрипторы для молекулы, заданной SMILES-строкой.
 
-    :param smiles: str — SMILES-представление молекулы
-    :return: dict — словарь {имя дескриптора: значение}, либо None при ошибке
+    Args:
+        smiles (str): SMILES-представление молекулы.
+
+    Returns:
+        dict: Словарь {имя_дескриптора: значение}, или None при ошибке.
     """
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:

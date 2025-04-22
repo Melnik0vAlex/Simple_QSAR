@@ -23,8 +23,11 @@ def compute_1d_2d_descriptors(smiles):
     """
     Вычисляет RDKit 1D и 2D дескрипторы для заданной молекулы по SMILES.
 
-    :param smiles: str — SMILES-строка молекулы
-    :return: dict — словарь {имя_дескриптора: значение} или None при ошибке
+    Args:
+        smiles (str): SMILES-строка молекулы.
+
+    Returns:
+        dict: Словарь {имя_дескриптора: значение}, или None при ошибке.
     """
     mol = Chem.MolFromSmiles(smiles)
 
