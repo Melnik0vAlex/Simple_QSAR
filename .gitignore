@@ -34,7 +34,6 @@ desktop.ini
 # ▶️ Logs & reports
 logs/
 *.log
-*.txt
 
 # ▶️ PyTest / coverage
 htmlcov/

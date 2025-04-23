@@ -12,6 +12,7 @@ logging.basicConfig(
     filename="logs/descriptors3d_errors.log",
     level=logging.ERROR,
     format="%(asctime)s - %(levelname)s - %(message)s",
+    encoding="utf-8",
 )
 
 # Список имён 3D-дескрипторов

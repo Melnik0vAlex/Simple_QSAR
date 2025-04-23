@@ -7,10 +7,9 @@ API-функции для вычисления 1D/2D и 3D дескриптор�
 import logging
 import time
 from typing import Optional
-
+from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor
 
 from descriptors.descriptors_1d2d import (
     compute_1d_2d_descriptors,
@@ -54,7 +53,7 @@ def compute_all_descriptors(
         def compute_1d_2d(smiles):
             try:
                 return compute_1d_2d_descriptors(smiles)
-            except Exception as e:
+            except (ValueError, TypeError, RuntimeError) as e:
                 logging.error("Ошибка 1D/2D-дескрипторов для %s: %s", smiles, str(e))
                 return [None] * len(descriptor_1d_2d_names)
 
@@ -81,7 +80,7 @@ def compute_all_descriptors(
         def compute_3d(smiles):
             try:
                 return compute_3d_descriptors(smiles)
-            except Exception as e:
+            except (ValueError, TypeError, RuntimeError) as e:
                 logging.error("Ошибка 3D-дескрипторов для %s: %s", smiles, str(e))
                 failed_smiles.append(smiles)
                 return [None] * len(descriptor_3d_names)
